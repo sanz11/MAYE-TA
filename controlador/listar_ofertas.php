@@ -1,6 +1,6 @@
 <?php
 require_once("modelo/Conectar.php");
-require_once("modelo/oferta.php");
+require_once("modelo/usuario.php");
 
 $oferta = new oferta();
 $msbusqueda="";

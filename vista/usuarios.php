@@ -15,9 +15,9 @@
  
           <div class="form-group col-sm-4">
             <label for="password">Fecha N:</label>
-            <input class="form-control" type="date"  name="defecha">
+            <input class="form-control" type="date"  name="fecha">
           </div>
-     <input type="submit" class="btn btn-primary col-sm-2 " name="buscar" value="Buscar" style="margin-left:50px;"/>
+     <input type="submit" class="btn btn-primary col-sm-2 " name="buscar" value="Buscar" style="margin-left:25px; margin-bottom:10px;"/>
             <input type="submit" class="btn btn-warning col-sm-2"name="todo" value="Listar Todo" style="margin-left:25px;"/>
             </form>
     <br>
@@ -41,13 +41,13 @@
            <th>Opciones</th>
         </tr>
         <?php
-          if($msmlista=="valido"){
+          if($valido=="1"){
           $numero=0;
           foreach($matrizUsuario as $registro){
               $numero=$numero+1;
 	       echo "<tr>
            <td>".$numero."</td>
-           <td><img src='".$registro["foto"]."' class='fototable'></td>
+           <td><img src='../fotosadmin/".$registro["foto"]."' class='fototable'></td>
            <td>".$registro["dni"]."</td>
            <td>".$registro["nombre"]." ".$registro["apellidos"]."</td>
            <td>".$registro["email"]."</td>
@@ -75,7 +75,7 @@
   	<div class="modal-dialog">
   		<div class="modal-content">
   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">modal</h1></center>	
+            <center><h1 style="color:crimsom;">¿SEGURO QUÉ DESEA ELIMINAR?</h1></center>	
   		    <div class="modal-body" style="background:#F6CECE;">
   		        
   			</div>

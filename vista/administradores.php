@@ -138,7 +138,7 @@
   	<div class="modal-dialog">
   		<div class="modal-content">
   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">SEGURO QUE DESEA ELIMINAR</h1></center>	
+            <center><h1 style="color:crimsom;">¿SEGURO QUE DESEA ELIMINAR?</h1></center>	
   		    <div class="modal-body" style="background:#F6CECE;">
   		        
   			</div>

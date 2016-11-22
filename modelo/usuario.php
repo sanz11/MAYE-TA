@@ -47,3 +47,65 @@
      }
      
  }
+
+class usuario{
+    public function get_usuario(){
+        $usuario=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion_cliente();
+        $sql ="select * from trabajador";
+        $stm=$conexion->prepare($sql);
+        $stm->execute();
+        
+        while($filas=$stm->fetch(PDO::FETCH_ASSOC)){
+             $usuario[]=$filas;
+         }
+         return $usuario;
+         
+    }
+    public function search_usuario($dato,$fecha){
+        $usuario=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion_cliente();
+        $sql ="select * from trabajador where ciudad=:dato or dni=:dato or nacimiento=:fecha";
+        $stm=$conexion->prepare($sql);
+        $stm->bindParam(":dato",$dato);
+        $stm->bindParam(":fecha",$fecha);
+        $stm->execute();
+        
+        while($filas=$stm->fetch(PDO::FETCH_ASSOC)){
+             $usuario[]=$filas;
+         }
+         return $usuario;
+         
+    }
+    public function delete_usuario(){
+        $usuario=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion_cliente();
+        $sql ="";
+        $stm=$conexion->prepare($sql);
+        $stm->execute();
+        
+       
+    }
+    
+}
+
+class sugerencias{
+    public function get_sugerencias(){
+        $sugerencias=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion_cliente();
+        $sql ="select * from sugerencias";
+        $stm=$conexion->prepare($sql);
+        $stm->execute();
+        
+        while($filas=$stm->fetch(PDO::FETCH_ASSOC)){
+             $sugerencias[]=$filas;
+         }
+         return $sugerencias;
+         
+    }
+}
+
