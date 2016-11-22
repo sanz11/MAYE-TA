@@ -29,7 +29,7 @@
          
          //ELIMINAMOS DE LA BASE DE DATOS A LOS QUE NO ESTAN ACEPTADOS
           $eliminar = $conexion->prepare("delete from trabajo where estado = 3;");
-         $eliminar->execute();
+         $eliminar->execute(); 
          
          //SELECCIONAMOS A LOS QUE FALTAN VALIDAR
          $sql ="select * from trabajo where estado = 0 and (rubro=:rubro or (fecha >=:defecha AND
