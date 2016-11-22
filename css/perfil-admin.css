@@ -124,7 +124,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
     width: 96%;
     margin-left: 2%;
     height: 43%;
-    border: 0.1px solid rgba(26, 119, 217,0.5);
+    border: 0.1px solid crimson;
 }
 .menu-ad span{
     padding: 10px;

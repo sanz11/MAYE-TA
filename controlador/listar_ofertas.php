@@ -3,62 +3,28 @@ require_once("modelo/Conectar.php");
 require_once("modelo/oferta.php");
 
 $oferta = new oferta();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-require_once("modelo/Conectar.php");
-require_once("modelo/admin.php");
-
-$admin= new admin();
 $msbusqueda="";
-
-@$dato=$_POST['dato'];
+$valido='0';
+@$rubro =$_POST['rubro'];
 @$defecha=$_POST['defecha'];
 @$hastafecha=$_POST['hastafecha'];
 
-if(@$_POST["buscar"]){
-
-$matrizAdmin=$admin->buscarAdmin($dato,$defecha,$hastafecha);
-$msbusqueda="RESULTADOS DE: ".$dato.", fecha: desde ".$defecha." hasta ".$hastafecha."";
-}else if(@$_POST["todo"]){
-    $matrizAdmin=$admin->listarAdmin();
-    $msbusqueda="SE ESTA MOSTRANDO LA LISTA COMPLETA";
+if(isset($_POST['buscar'])){
+    $matrizOferta = $oferta->search_oferta($rubro,$defecha,$hastafecha);
+    $msbusqueda="Resultado de la busqueda de ". $rubro.", fecha: desde ".$defecha." hasta ".$hastafecha."";
+    
+}else if(isset($_POST['todo'])){
+    $matrizOferta = $oferta->get_oferta();
+    $msbusqueda="Se está mostrando TODA la lista";
 }else{
-    $matrizAdmin=$admin->listarAdmin();
-    $msbusqueda="SE ESTA MOSTRANDO LA LISTA COMPLETA";
+    $matrizOferta = $oferta->get_oferta();
+    $msbusqueda="Se está mostrando TODA la lista";
 }
 
-if($matrizAdmin){
-    $msmlista="valido";
+if($matrizOferta){
+    $valido="1";
 }else{
-    $msmlista="novalido";
+     $valido="0";
     $msbusqueda="";
 }
 
