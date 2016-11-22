@@ -42,7 +42,7 @@
        <tr class="info">
            <th>Nro</th>
            <th>DNI</th>
-           <th>Nick</th>
+           <th>Telefono</th>
            <th>Nombre y Apellidos</th>
            <th>Correo</th> 
            <th>Tipo</th>
@@ -58,7 +58,7 @@
 	       echo "<tr>
            <td>".$numero."</td>
            <td>".$registro["dni"]."</td>
-           <td>".$registro["nick"]."</td>
+           <td>".$registro["telefono"]."</td>
            <td>".$registro["nombre"]." ".$registro["apellidos"]."</td>
            <td>".$registro["correo"]."</td>
            <td>".$registro["tipo_admin"]."</td>
@@ -101,7 +101,7 @@
                         <input type="text" class="form-control" name="apellidos" required>
                       </div>
                        <div class="form-group col-sm-6">
-                        <label for="nick">nick:</label>
+                        <label for="nick">Telefono:</label>
                         <input type="text" class="form-control" name="nick" required>
                       </div>
                       <div class="form-group col-sm-6">
@@ -138,7 +138,7 @@
   	<div class="modal-dialog">
   		<div class="modal-content">
   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:#2E9AFE;">SEGURO QUE DESEA ELIMINAR</h1></center>	
+            <center><h1 style="color:crimsom;">SEGURO QUE DESEA ELIMINAR</h1></center>	
   		    <div class="modal-body" style="background:#F6CECE;">
   		        
   			</div>

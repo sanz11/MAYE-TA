@@ -123,7 +123,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 .menu-ad{
     width: 96%;
     margin-left: 2%;
-    height: 30%;
+    height: 43%;
     border: 0.1px solid rgba(26, 119, 217,0.5);
 }
 .menu-ad span{
@@ -196,8 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 .contenido #titulo{
     text-align: center;
     font-family: 'Baloo Bhaina', cursive;
-    color: white;
-    color:rgba(26,119,217,1);
+    color:crimson;
 }
 .contenido .body{
     width: 90%;

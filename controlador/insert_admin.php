@@ -15,12 +15,12 @@ $mensaje="";
 
 $consulta= new admin();
     
-$existe =$consulta->existeAdmin($dni);
+$existe =$consulta->existeAdmin($dni,$correo);
     
 if(!$existe){
     $mensaje=$consulta->insertarAdmin($dni,$nombre,$apellidos,$nick,$correo,$tipo,$password,$fecha);
 }else{
-    $mensaje="NO SE PUDO REGISTRAR, Ya existe un administrador con el mismo DNI";
+    $mensaje="NO SE PUDO REGISTRAR, Ya existe un administrador con el mismo DNI o CORREO";
 }
 	
 }

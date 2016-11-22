@@ -8,7 +8,7 @@
 		 $conexion=$modelo->get_conexion();
         $foto="im/avatar.png";
 		 
-		 $sql="insert into administrador(dni,nombre,apellidos,nick,correo,tipo_admin,password,foto,fecha_ingreso) values(:dni, :nombre, :apellidos, :nick, :correo, :tipo, :pass, :foto,:fecha) ";
+		 $sql="insert into administrador(dni,nombre,apellidos,telefono,correo,tipo_admin,contra,foto,fecha_ingreso) values(:dni, :nombre, :apellidos, :nick, :correo, :tipo, :pass, :foto,:fecha) ";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':dni',$dni);
            $statement->bindParam(':nombre',$nombre);
@@ -93,15 +93,16 @@
 				}
 		  
 	 	}
-	 public function existeAdmin($dni){
+	 public function existeAdmin($dni,$correo){
 		 $admin = null;
 		  $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		  
 		 
-		 $consulta1=(" select * from  administrador where dni=:dni ");
+		 $consulta1=(" select * from  administrador where dni=:dni or correo=:correo ");
 		 $statement1=$conexion->prepare($consulta1);
 		 $statement1->bindParam(':dni',$dni);
+         $statement1->bindParam(':correo',$correo);
 		 $statement1->execute();
 		  
 		  while($filas=$statement1->fetch(PDO::FETCH_ASSOC)){

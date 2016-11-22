@@ -48,8 +48,10 @@
 				        </div>
 				    </div>
 				    <div class="menu-ad">
-				        <a href="?pagina=clientes.php"><span class="glyphicon glyphicon-check"></span>Clientes</a>
-				        <a href="?pagina=carnet.php"><span class="glyphicon glyphicon-credit-card"></span>carnets</a>
+				        <a href="?pagina=ofertas.php"><span class="glyphicon glyphicon-check"></span>Validar Ofertas</a>
+				        <a href="?pagina=usuarios.php"><span class="glyphicon glyphicon-user"></span>Usuarios</a>
+				        <a href="?pagina=sugerencias.php"><span class="glyphicon glyphicon-question-sign"></span>Sugerencias</a>
+				        <a href="?pagina=oficios.php"><span class="glyphicon glyphicon-credit-card"></span>Oficios</a>
 				    </div>
 				    <div class="alert alert-warning"><?php echo @$mmsactualizar;?></div>
 				</div>

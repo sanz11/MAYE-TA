@@ -2,7 +2,8 @@
 
 <?php
 if(isset($_GET['pagina'])){
-    if($_GET['pagina']=="bienvenido.php"||$_GET['pagina']=="administradores.php"||$_GET['pagina']=="carnet.php"||$_GET['pagina']=="clientes.php"){
+    if($_GET['pagina']=="bienvenido.php"||$_GET['pagina']=="administradores.php"||
+       $_GET['pagina']=="carnet.php"||$_GET['pagina']=="clientes.php"){
         $url=$_GET['pagina'];
     }else{
          $url='bienvenido.php';
