@@ -204,11 +204,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 }
 .bien{
  font-family: 'Baloo Bhaina', cursive;
-margin:250px 15px;
-font-size: 50px;
+margin: 150px 150px;
+font-size: 100px;
 text-align: center;
-color: dodgerblue;
-background-color: rgba(255,255,255,0.1);
+color: rgba(220,2,20,0.9);
 -webkit-text-shadow: 8px 5px rgba(69,68,68,1);
 -moz-text-shadow:  8px 5px rgba(69,68,68,1);
 text-shadow: 8px 5px rgba(69,68,68,1);

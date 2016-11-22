@@ -19,7 +19,7 @@
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];
                     $_SESSION["dni"]=$arreglo["dni"];
-                    $_SESSION["nick"]=$arreglo["nick"];
+                    $_SESSION["telefono"]=$arreglo["telefono"];
                     $_SESSION["apellidos"]=$arreglo["apellidos"];
 					$_SESSION["correo"]=$arreglo["correo"];
 					$_SESSION["foto"]=$arreglo["foto"];

@@ -77,7 +77,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		  
-			    $consulta=(" update  administrador set correo=:email,nick=:telefono,foto=:foto where dni=:dni ");
+			    $consulta=(" update  administrador set correo=:email,telefono=:telefono,foto=:foto where dni=:dni ");
 			  	$statement=$conexion->prepare($consulta);
 		 		$statement->bindParam(':email',$email);
                 $statement->bindParam(':telefono',$telefono);

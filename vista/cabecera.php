@@ -85,7 +85,7 @@
   </div>
   <div class="form-group">
     <label for="telefono">Teléfono:</label>
-    <input type="text" class="form-control" value="<?php echo $_SESSION["nick"];?>" name="telefono">
+    <input type="text" class="form-control" value="<?php echo $_SESSION["telefono"];?>" name="telefono">
   </div>
   <div class="form-group">
     <label for="ejemplo_archivo_1" >Editar foto de perfil</label>
