@@ -1,5 +1,4 @@
 <?php include 'controlador/listar_usuario.php';?>
-<?php include 'controlador/eliminar_usuario.php';?>
 <div class="contenido">
    <h3 id="titulo">Mantenimiento Usuarios</h3>
 <div class="body">
@@ -96,11 +95,11 @@
             </div>
 			  <div class="modal-body">
 			  	<center>
-			  	<form action="?" name="eliminar" method="post">
+			  	<form action="controlador/eliminar_usuario.php" method="post">
                      <img id="ima" height="200px" >
                     Usted esta a punto de eliminar a: <h4 id="nom"></h4>
                    con dni:
-			  	     <input type="text" readonly="readonly" id="dni"/><br>
+			  	     <input type="text" readonly name="dni" id="dni"/><br>
 			  	    <input type="submit" value="eliminar" name="eliminar">
 			  	</form>
 			  	</center>
