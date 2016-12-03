@@ -5,20 +5,32 @@
     
        <form  method="post" action="" class="row">
          <legend style="margin-left:25px;"> Buscar por </legend>
-          <div class="form-group col-sm-4">
-            <label for="rubro">Rubro</label>
-            <input type="text" class="form-control" name="rubro" />
-          </div>
- 
-          <div class="form-group col-sm-4">
-            <label for="password">de esta Fecha:</label>
-            <input class="form-control" type="date"  name="defecha">
-          </div>
-          
-          <div class="form-group col-sm-4">
-            <label for="password">hasta esta Fecha:</label>
-            <input class="form-control" type="date"  name="hastafecha">
-          </div>
+          <div class="row clearfix col-sm-12">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                           <label for="dni">Rubro:</label>
+                            <input type="text" class="form-control" name="rubro" placeholder="dato">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label for="password">de esta Fecha:</label>
+                            <input type="date" class="form-control" name="defecha" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label for="password">hasta esta Fecha:</label>
+                            <input type="date" class="form-control" name="hastafecha">
+                        </div>
+                    </div>
+                </div>
+         </div>
      <input type="submit" class="btn btn-primary col-sm-2 " name="buscar" value="Buscar" style="margin-left:50px;"/>
             <input type="submit" class="btn btn-warning col-sm-2"name="todo" value="Listar Todo" style="margin-left:25px;"/>
             </form>

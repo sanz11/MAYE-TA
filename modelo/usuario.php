@@ -79,12 +79,13 @@ class usuario{
          return $usuario;
          
     }
-    public function delete_usuario(){
+    public function delete_usuario($dni){
         $usuario=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion_cliente();
-        $sql ="";
+        $sql ="delete from trabajador where dni=:dni";
         $stm=$conexion->prepare($sql);
+        $stm->bindParam(":dni",$dni);
         $stm->execute();
         
        

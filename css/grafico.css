@@ -1,0 +1,182 @@
+.circular-gasfitero{
+  width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(25,255,255,0.5) 50%, rgba(25,255,255,1) 50%);
+    position: relative;
+    transform: rotate(10deg)
+    
+}
+.circular-gasfitero:before{
+    content: "gasfitero";
+  width: 12rem;
+    height: 12rem;
+     color: rgba(2,155,255,1);
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #FFF content-box;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 7.5rem;
+    transform: rotate(-10deg);
+}
+.circular-gasfitero:after{
+   
+    content: "10%";
+  width: 12.2rem;
+    height: 12.1rem;
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%);
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 15rem;
+     transform: rotate(-10deg);
+}
+
+
+.circular-chofer{
+  width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(25,255,25,0.5) 50%, rgba(25,255,25,1) 50%);
+    position: relative;
+    transform: rotate(40deg)
+    
+}
+.circular-chofer:before{
+    content: "Chofer";
+  width: 12rem;
+    height: 12rem;
+     color: rgba(2,155,25,1);
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #FFF content-box;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 7.5rem;
+    transform: rotate(-40deg);
+}
+.circular-chofer:after{
+   
+    content: "20%";
+  width: 12.2rem;
+    height: 12.2rem;
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%);
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 15rem;
+     transform: rotate(-40deg);
+}
+
+
+.circular-mecanico{
+  width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(250,25,255,0.5) 50%, rgba(250,25,255,1) 50%);
+    position: relative;
+    transform: rotate(60deg)
+    
+}
+.circular-mecanico:before{
+    content: "Mecanico";
+  width: 12rem;
+    height: 12rem;
+     color: rgba(250,25,255,1);
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #FFF content-box;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 7.5rem;
+    transform: rotate(-60deg);
+}
+.circular-mecanico:after{
+   
+    content: "30%";
+  width: 12.2rem;
+    height: 12.2rem;
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%);
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 15rem;
+     transform: rotate(-60deg);
+}
+
+.circular-otros{
+  width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(25,255,255,0.5) 50%, rgba(25,255,255,1) 50%);
+    position: relative;
+    transform: rotate(70deg)
+    
+}
+.circular-otros:before{
+    content: "Otros";
+  width: 12rem;
+    height: 12rem;
+     color: rgba(2,155,255,1);
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #FFF content-box;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 7.5rem;
+    transform: rotate(-70deg);
+}
+.circular-otros:after{
+   
+    content: "40%";
+  width: 12.2rem;
+    height: 12.2rem;
+     position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%);
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 15rem;
+     transform: rotate(-70deg);
+}
+
+.progre{
+   float: left;
+    margin:auto 40px;
+}

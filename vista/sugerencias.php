@@ -9,19 +9,19 @@
        <tr class="info">
            <th>Nro</th>
            <th>Usuario</th>
-           <th>Sugerencias</th>
+           <th>Quéjas oSugerencias</th>
            <th>Opciones</th>
         </tr>
         <?php
           if($valido=="1"){
           $numero=0;
-          foreach($matrizSugerencias $registro){
+          foreach($matrizSugerencias as $registro){
               $numero=$numero+1;
 	       echo "<tr>
            <td>".$numero."</td>
            <td>".$registro["usuario"]."</td>
            <td>".$registro["sugerencias"]."</td>
-           <td><button class='btn btn-success'><span class'glyphicon glyphicon-ok'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button> </td>
+           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button> </td>
            </tr>";
             }}
           else{

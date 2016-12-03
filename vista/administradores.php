@@ -12,20 +12,34 @@
        <!--registro-->
        <form  method="post" action="" class="row">
          <legend style="margin-left:25px;"> Buscar por </legend>
-          <div class="form-group col-sm-4">
-            <label for="dni">DNI/ apellidos / tipo/</label>
-            <input type="text" class="form-control" name="dato" />
-          </div>
- 
-          <div class="form-group col-sm-4">
-            <label for="password">de esta Fecha:</label>
-            <input class="form-control" type="date"  name="defecha">
-          </div>
           
-          <div class="form-group col-sm-4">
-            <label for="password">hasta esta Fecha:</label>
-            <input class="form-control" type="date"  name="hastafecha">
-          </div>
+          
+          <div class="row clearfix col-sm-12">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                           <label for="dni">DNI/ apellidos / tipo/</label>
+                            <input type="text" class="form-control" name="dato" placeholder="dato">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label for="password">de esta Fecha:</label>
+                            <input type="date" class="form-control" name="defecha" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label for="password">hasta esta Fecha:</label>
+                            <input type="date" class="form-control" name="hastafecha">
+                        </div>
+                    </div>
+                </div>
+         </div>
      <input type="submit" class="btn btn-primary col-sm-2 " name="buscar" value="Buscar" style="margin-left:50px;"/>
             <input type="submit" class="btn btn-warning col-sm-2"name="todo" value="Listar Todo" style="margin-left:25px;"/>
             </form>
@@ -64,7 +78,12 @@
            <td>".$registro["tipo_admin"]."</td>
            <td>".$registro["fecha_ingreso"]."</td>
            <td><img src='".$registro["foto"]."' class='fototable'></td>
-           <td><button class='btn btn-danger btn-xs'><span data-toggle='modal'data-target='#mod_eliminar' class='glyphicon glyphicon-trash'></span></button><button class='btn btn-success btn-xs'><span class='glyphicon glyphicon-pencil'></span></button> </td>
+           <td>
+           <a href='javascript:ver("'S','D','D'");' class='clik-ver btn btn-primary'>ver mas</a>
+           
+           <button class='btn btn-danger btn-xs'><span data-toggle='modal'data-target='#mod_eliminar' class='glyphicon glyphicon-trash'></span></button>
+           
+           <button class='btn btn-success btn-xs'><span class='glyphicon glyphicon-pencil'></span></button> </td>
            </tr>";
             }}
           else{
@@ -145,5 +164,19 @@
   		</div>
   		
   	</div>
-    </div>
+ </div>
+ 
+  <!--MODAL EDITAR-->
+<div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+            <center><h1 style="color:crimsom;">¿SEGURO QUE DESEA ELIMINAR?</h1></center>	
+  		    <div class="modal-body" style="background:#F6CECE;">
+  		        
+  			</div>
+  		</div>
+  		
+  	</div>
+ </div>
 

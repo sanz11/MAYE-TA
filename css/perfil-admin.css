@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.icon-menu1{
+    color: white;
+}
 .body{
     background: rgba(255,255,255,0.7);
     padding: 15px;
