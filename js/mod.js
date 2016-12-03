@@ -11,6 +11,6 @@ $(function(){
 
 function del_usuario(dni,nom,foto){
 	$('#dni').val(dni);
-    $('#nom').val(nom);
-	//$('#ima').src("../../fotosadmin/"+foto);
+    $('#nom').text(nom);
+	$('#ima').src("../../fotosadmin/"+foto);
 }

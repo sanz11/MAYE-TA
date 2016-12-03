@@ -96,8 +96,11 @@
             </div>
 			  <div class="modal-body">
 			  	<center>
-			  	<form action="?" name="eliminar">
-			  	    <input type="text" readonly="readonly" id="nom"/><br>
+			  	<form action="?" name="eliminar" method="post">
+                     <img id="ima" height="200px" >
+                    Usted esta a punto de eliminar a: <h4 id="nom"></h4>
+                   con dni:
+			  	     <input type="text" readonly="readonly" id="dni"/><br>
 			  	    <input type="submit" value="eliminar" name="eliminar">
 			  	</form>
 			  	</center>
