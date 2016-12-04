@@ -78,13 +78,14 @@
            <td>".$registro["tipo_admin"]."</td>
            <td>".$registro["fecha_ingreso"]."</td>
            <td><img src='".$registro["foto"]."' class='fototable'></td>
-           <td>
-           <a href='javascript:ver("'S','D','D'");' class='clik-ver btn btn-primary'>ver mas</a>
+           <td>";
+              ?>
+    <a href="javascript:del_admin('<?php echo $registro['dni'];?>','<?php echo $registro['nombre'];?>','<?php echo $registro['foto'];?>');" class=" clik-eli glyphicon glyphicon-trash btn-danger btn" ></a>
+          
+    <a href="javascript:edit_admin('<?php echo $registro['dni'];?>','<?php echo $registro['nombre'];?>');" class=" clik-edi glyphicon glyphicon-pencil btn-success btn" ></a>
+          
+            <?php echo "  </td>     </tr>";
            
-           <button class='btn btn-danger btn-xs'><span data-toggle='modal'data-target='#mod_eliminar' class='glyphicon glyphicon-trash'></span></button>
-           
-           <button class='btn btn-success btn-xs'><span class='glyphicon glyphicon-pencil'></span></button> </td>
-           </tr>";
             }}
           else{
               echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
@@ -152,31 +153,61 @@
   	</div>
     </div>
     
+  
     <!--MODAL ELIMINAR-->
-<div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade " id="mod_eli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
-  		<div class="modal-content">
-  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">¿SEGURO QUE DESEA ELIMINAR?</h1></center>	
-  		    <div class="modal-body" style="background:#F6CECE;">
-  		        
-  			</div>
-  		</div>
-  		
-  	</div>
- </div>
- 
-  <!--MODAL EDITAR-->
-<div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <center><h4 class="modal-title" id="myModalLabel"><b>¿SEGURO QUE DESEA ELIMINAR?</b></h4></center>
+            </div>
+			  <div class="modal-body">
+			  	<center>
+			  	<form action="controlador/eliminar_admin.php" method="post">
+                     <img id="ima" src="im/admin/avatar.png"height="200px" ><br>
+                    <h4>Usted esta a punto de eliminar a: </h4> <h2 id="nom"></h2>
+                    <h4>con dni N°:</h4> 
+			  	     <input type="text" readonly name="dni" id="dni"/><br><br>
+			  	    <input type="submit" value="Eliminar" name="eliminar" class="btn-danger btn">
+			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+			  	</form>
+			  	</center>
+			  </div>
+            
+          </div>
+        </div>
+    </div>
+    
+    
+  <!--MODAL EDI-->
+<div class="modal fade " id="mod_edi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
-  		<div class="modal-content">
-  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">¿SEGURO QUE DESEA ELIMINAR?</h1></center>	
-  		    <div class="modal-body" style="background:#F6CECE;">
-  		        
-  			</div>
-  		</div>
-  		
-  	</div>
- </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <center><h4 class="modal-title" id="myModalLabel"><b>EDITAR</b></h4></center>
+            </div>
+			  <div class="modal-body">
+			  	<center>
+			  	<form action="controlador/edit_admin.php" method="post">
+    
+                <h4>Actualizar a </h4> <h2 id="nombr"></h2>
+                    <h4>con dni N°:</h4> 
+			  	     <input type="text" readonly name="dniad" id="dniad"/><br><br>
+			  	    <select name="tipo" class="form-control col-sm-3">
+                            <option value="admin">admin</option>
+                             <option value="superadmin">superadmin</option>
+                             <option value="inhabilitado">inhabilitado</option>
+                        </select><br><br>
+			  	    <input type="submit" value="Actualizar" name="actualizar" class="btn-danger btn">
+			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+			  	</form>
+			  	</center>
+			  </div>
+            
+          </div>
+        </div>
+    </div>
+
 

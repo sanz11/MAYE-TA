@@ -92,6 +92,25 @@
 			  		return "tus datos se actualizaron <strong>correctamente.<br>Vuelva a iniciar sessión</strong> para ver los cambios";
 				}
 		  
+	 	} 
+     public function Update_adminadmi($dni,$tipo){
+		 
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		  
+			    $consulta=(" update  administrador set tipo_admin=:tipo where dni=:dni ");
+			  	$statement=$conexion->prepare($consulta);
+                $statement->bindParam(':dni',$dni); 
+                $statement->bindParam(':tipo',$tipo); 
+		  
+		  		if(!$statement){
+			  		return "error al actualizar";
+					
+		  		}else{
+			   		$statement->execute();
+			  		return "tus datos se actualizaron <strong>correctamente.<br>Vuelva a iniciar sessión</strong> para ver los cambios";
+				}
+		  
 	 	}
 	 public function existeAdmin($dni,$correo){
 		 $admin = null;
@@ -113,7 +132,24 @@
 		 return $admin; 
 	 }
 	 
- 
+ public function eliminar_admin($dni){
+		 
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		  
+			    $consulta=(" delete from administrador where dni=:dni ");
+			  	$statement=$conexion->prepare($consulta);
+                $statement->bindParam(':dni',$dni);     
+		  
+		  		if(!$statement){
+			  		return "error al eliminar";
+					
+		  		}else{
+			   		$statement->execute();
+			  		return "selelimino correctamente";
+				}
+		  
+	 	}
 
 
      

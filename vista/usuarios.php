@@ -91,16 +91,17 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel"><b>¿SEGURO QUE DESEA ELIMINAR?</b></h4>
+              <center><h4 class="modal-title" id="myModalLabel"><b>¿SEGURO QUE DESEA ELIMINAR?</b></h4></center>
             </div>
 			  <div class="modal-body">
 			  	<center>
 			  	<form action="controlador/eliminar_usuario.php" method="post">
-                     <img id="ima" height="200px" >
-                    Usted esta a punto de eliminar a: <h4 id="nom"></h4>
-                   con dni:
-			  	     <input type="text" readonly name="dni" id="dni"/><br>
-			  	    <input type="submit" value="eliminar" name="eliminar">
+                     <img id="ima" src="im/admin/avatar.png"height="200px" ><br>
+                    <h4>Usted esta a punto de eliminar a: </h4> <h2 id="nom"></h2>
+                    <h4>con dni N°:</h4> 
+			  	     <input type="text" readonly name="dni" id="dni"/><br><br>
+			  	    <input type="submit" value="Eliminar" name="eliminar" class="btn-danger btn">
+			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>
 			  	</center>
 			  </div>

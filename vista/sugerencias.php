@@ -35,6 +35,39 @@
         </table>
         </div> 
        
+       <H1>PENDIENTES</H1>
+       
+       <div class=" t table-responsive" class="row"> 
+      <table class="table table-striped table-bordered table-condensed">
+       <tr class="info">
+           <th>Nro</th>
+           <th>Usuario</th>
+           <th>Quéjas oSugerencias</th>
+           <th>Opciones</th>
+        </tr>
+        <?php
+          if($valido=="1"){
+          $numero=0;
+          foreach($matrizSugerencias as $registro){
+              $numero=$numero+1;
+	       echo "<tr>
+           <td>".$numero."</td>
+           <td>".$registro["usuario"]."</td>
+           <td>".$registro["sugerencias"]."</td>
+           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button> </td>
+           </tr>";
+            }}
+          else{
+              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+          }
+          //echo $msn;
+          ?>
+          
+        
+       
+        </table>
+        </div> 
+       
 </div>
 </div>
     
