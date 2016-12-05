@@ -63,7 +63,13 @@
            <td>".$registro["rubro"]."</td>
            <td style='max-width:410px;'>".$registro["descripcion"]."</td>
            <td>".$registro["fecha"]."</td>
-           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span><button class='btn btn-danger'><span class='glyphicon glyphicon-eye-open'></span></button> </td>
+           <td>";
+           ?>            
+           <a href="javascript:val_oferta('<?php echo $registro['id'];?>','<?php echo $registro['nombre'];?>','<?php echo $registro['rubro'];?>','<?php echo $registro['email'];?>');" class=" clik-val glyphicon glyphicon-ok btn btn-success" ></a>
+          
+    <a href="javascript:obs_oferta('<?php echo $registro['id'];?>','<?php echo $registro['email'];?>','<?php echo $registro['rubro'];?>');" class=" clik-obs glyphicon glyphicon-eye-open btn-danger btn" ></a>
+           <?php echo "
+           </td>
            </tr>";
             }}
           else{
@@ -82,17 +88,60 @@
 </div>
 </div>
     
-    <!--MODAL ELIMINAR-->
-<div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!--MODAL validar-->
+<div class="modal fade " id="mod_val" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
-  		<div class="modal-content">
-  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">modal</h1></center>	
-  		    <div class="modal-body" style="background:#F6CECE;">
-  		        
-  			</div>
-  		</div>
-  		
-  	</div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <center><h2 class="modal-title" id="myModalLabel"><b>¿PUBLICAR ESTA OFERTA?</b></h2></center>
+            </div>
+			  <div class="modal-body">
+			  	<center>
+			  	<form action="controlador/validaroferta.php" method="post">
+                    <h4>Usted esta a punto de <span class="negrita1">validar</span> la oferta de: </h4> <h2 class="oferta"id="rubro"></h2>
+                    <h4>que fue publicada por:</h4>
+                    <h2 class="name"id="nom"></h2>
+			  	     <input type="text" name="email" id="email" class="disnone"/><input type="text"  name="id" id="id" class="disnone"/><br><br>
+			  	    <input type="submit" value="Publicar" name="publicar" class="btn-primary btn">
+			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+			  	</form>
+			  	</center>
+			  </div>
+            
+          </div>
+        </div>
     </div>
+
+   <style type="text/css">
+       .disnone {display: none;}
+       .oferta{color: crimson;}
+       .name{color:darkcyan;}
+        .negrita1{color:forestgreen;}
+       .negrita2{color:firebrick;}
+   </style>
+    
+  <!--MODAL obserbar-->
+<div class="modal fade " id="mod_obs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <center><h2 class="modal-title" id="myModalLabel"><b>MARCAR COMO OBSERVADO</b></h2></center>
+            </div>
+			  <div class="modal-body">
+			  	<center>
+			  	<form action="controlador/validaroferta.php" method="post">
+                    <h4>Usted esta a punto de marcar como <span class="negrita2">observado</span> esta oferta de: </h4> <h2 class="oferta" id="rubrobs"></h2>
+			  	     <input type="text" name="emailobs" id="emailobs" class="disnone"/><input type="text"  name="idobs" id="idobs" class="disnone"/><br><br>
+			  	    <input type="submit" value="Publicar" name="publicar" class="btn-primary btn">
+			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+			  	</form>
+			  	</center>
+			  </div>
+            
+          </div>
+        </div>
+    </div>
+
 

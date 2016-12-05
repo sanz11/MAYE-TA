@@ -46,3 +46,39 @@ $(function(){
 	
 	
 });
+
+//OFERTA
+function val_oferta(id,nom,rubro,email){
+	$('#id').val(id);
+    $('#nom').text(nom);
+    $('#rubro').text(rubro);
+    $('#email').val(email);
+}
+function obs_oferta(id,email,rubro){
+	$('#idobs').val(id);
+    $('#emailobs').val(email);
+    $('#rubrobs').text(rubro);
+    
+}
+
+$(function(){
+	$('.clik-val').on('click',function(){
+		$('#mod_val').modal({
+			show:true,
+			backdrop:'static'
+		});
+	});
+	
+	
+});
+
+$(function(){
+	$('.clik-obs').on('click',function(){
+		$('#mod_obs').modal({
+			show:true,
+			backdrop:'static'
+		});
+	});
+	
+	
+});
