@@ -134,7 +134,7 @@
 			  	<form action="controlador/validaroferta.php" method="post">
                     <h4>Usted esta a punto de marcar como <span class="negrita2">observado</span> esta oferta de: </h4> <h2 class="oferta" id="rubrobs"></h2>
 			  	     <input type="text" name="emailobs" id="emailobs" class="disnone"/><input type="text"  name="idobs" id="idobs" class="disnone"/><br><br>
-			  	    <input type="submit" value="Publicar" name="publicar" class="btn-primary btn">
+			  	    <input type="submit" value="Observar" name="observar" class="btn-primary btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>
 			  	</center>

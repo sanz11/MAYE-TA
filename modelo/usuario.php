@@ -46,6 +46,30 @@
          return $oferta;
      }
      
+      public function publicar($id){
+         $oferta=null;
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion_cliente();
+         
+        
+         $sql ="update trabajo set estado=1 where id=:id;";
+         $variable =$conexion->prepare($sql);
+         $variable->bindParam(':id',$id); 
+         $variable->execute();
+         
+     }
+     public function observar($id){
+         $oferta=null;
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion_cliente();
+          
+         $sql ="delete from trabajo where id =:id;";
+         $variable =$conexion->prepare($sql);
+          $variable->bindParam(':id',$id); 
+         $variable->execute();
+         
+     }
+     
  }
 
 class usuario{

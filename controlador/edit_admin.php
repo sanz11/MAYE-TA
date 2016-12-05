@@ -9,7 +9,7 @@ if(isset($_POST['actualizar'])){
 $dato = $_POST['dniad'];
 $tipo = $_POST['tipo'];
     
-    echo $hola =$user->Update_adminadmi($dato,$tipo);
+$user->Update_adminadmi($dato,$tipo);
     
     header("location:../superadmin.php?pagina=administradores.php");
 }
