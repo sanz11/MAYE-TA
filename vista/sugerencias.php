@@ -91,9 +91,9 @@
             <center><h1 style="color:crimsom;">VALIDAR SUGERENCIA</h1></center>	
   		    <div class="modal-body">
   		        <center>
-                    <form action="controlador/validarsugerencia.php">
+                    <form action="controlador/validarsugerencia.php" method="post">
                         <h4>Usted está apunto de <span class="negrita1">enviar</span> la sugerencia de <h2 id="names" style="color:darkcyan"></h2> a la listra de trabajos pendientes</h4>
-                        <input type="text" id="idsu" style="display:none"><br>
+                        <input type="text" id="idsu" name="idsu" style="display:none"><br>
                         <input type="submit" name="vali" value="Validar" class="btn btn-primary">
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
@@ -115,9 +115,9 @@
             <center><h1 style="color:crimsom;">DESCARTAR SUGERENCIA</h1></center>	
   		    <div class="modal-body" >
                 <center>
-                    <form action="controlador/validarsugerencia.php">
+                    <form action="controlador/validarsugerencia.php" method="post">
                        <h4>Usted está apunto de <span class="negrita2">descartar</span> la sugerencia de <h2 id="namer" style="color:darkcyan"></h2> </h4>
-                        <input type="text" id="idsue" style="display:none"><br>
+                        <input type="text" id="idsue" name="idsue" style="display:none"><br>
                         <input type="submit" name="descartar" value="Descartar" class="btn btn-warning">
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true"> 
@@ -136,9 +136,9 @@
             <center><h1 style="color:crimsom;">MARCAR COMO TERMINADO</h1></center>	
   		    <div class="modal-body" >
   		        <center>
-                    <form action="controlador/validarsugerencia.php">
+                    <form action="controlador/validarsugerencia.php" method="post">
                         <h4>Usted está apunto de marcar como <span class="negrita1">terminado</span> la sugerencia de <h2 id="de" style="color:darkcyan"></h2> </h4>
-                        <input type="text" id="idval" style="display:none"><br>
+                        <input type="text" id="idval" name="idval" style="display:none"><br>
                         <input type="submit" name="terminado" value="Validar" class="btn btn-primary">
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">

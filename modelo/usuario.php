@@ -160,9 +160,9 @@ class sugerencias{
 	  public function validar($id){
 		 
 		 $modelo = new Conexion();
-		 $conexion=$modelo->get_conexion();
+		 $conexion=$modelo->get_conexion_cliente();
 		  
-			    $consulta=(" update  sugerencias set estado=:1 where id=:id ");
+			    $consulta=(" update sugerencias set estado=1 where id=:id ");
 			  	$statement=$conexion->prepare($consulta);
                 $statement->bindParam(':id',$id);     
 		  
