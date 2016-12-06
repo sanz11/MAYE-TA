@@ -82,3 +82,51 @@ $(function(){
 	
 	
 });
+
+//SUGERENCIAS
+function vali_sugere(id,de){
+	$('#idsu').val(id);
+    $('#names').text(de);
+}
+function elimi_sugere(id,de){
+	$('#idsue').val(id);
+    $('#namer').text(de);
+    
+}
+function val_sugere(id,de){
+	$('#idval').val(id);
+    $('#de').text(de);
+    
+}
+
+$(function(){
+	$('.clik-validar').on('click',function(){
+		$('#mod_validarsuge').modal({
+			show:true,
+			backdrop:'static'
+		});
+	});
+	
+	
+});
+$(function(){
+	$('.clik-vali').on('click',function(){
+		$('#mod_valisuge').modal({
+			show:true,
+			backdrop:'static'
+		});
+	});
+	
+	
+});
+
+$(function(){
+	$('.clik-elimi').on('click',function(){
+		$('#mod_elimisuge').modal({
+			show:true,
+			backdrop:'static'
+		});
+	});
+	
+	
+});

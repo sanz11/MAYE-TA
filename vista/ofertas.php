@@ -127,7 +127,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <center><h2 class="modal-title" id="myModalLabel"><b>MARCAR COMO OBSERVADO</b></h2></center>
+              <center><h2 class="modal-title" id="myModalLabel" ><b>MARCAR COMO OBSERVADO</b></h2></center>
             </div>
 			  <div class="modal-body">
 			  	<center>

@@ -146,5 +146,34 @@ class sugerencias{
          return $sugerencias;
          
     }
+      public function observar($id){
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion_cliente();
+          
+         $sql ="delete from sugerencias where id =:id;";
+         $variable =$conexion->prepare($sql);
+          $variable->bindParam(':id',$id); 
+         $variable->execute();
+         
+     }
+    
+	  public function validar($id){
+		 
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		  
+			    $consulta=(" update  sugerencias set estado=:1 where id=:id ");
+			  	$statement=$conexion->prepare($consulta);
+                $statement->bindParam(':id',$id);     
+		  
+		  		if(!$statement){
+			  		return "error al actualizar";
+					
+		  		}else{
+			   		$statement->execute();
+			  		return "los datos se actualizaron <strong>correctamente.<br>Vuelva a iniciar sessión</strong> para ver los cambios";
+				}
+		  
+	 	} 
 }
 

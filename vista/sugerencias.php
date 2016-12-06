@@ -21,7 +21,12 @@
            <td>".$numero."</td>
            <td>".$registro["usuario"]."</td>
            <td>".$registro["sugerencias"]."</td>
-           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button> </td>
+           <td>";?>
+            <a href="javascript:vali_sugere('<?php echo $registro['id'];?>','<?php echo $registro['usuario'];?>');" class=" clik-vali glyphicon glyphicon-ok btn btn-success" ></a>
+            <a href="javascript:elimi_sugere('<?php echo $registro['id'];?>','<?php echo $registro['usuario'];?>');" class=" clik-elimi glyphicon glyphicon-remove btn btn-danger" ></a>
+           
+           
+           <?php echo" </td>
            </tr>";
             }}
           else{
@@ -54,7 +59,10 @@
            <td>".$numero."</td>
            <td>".$registroval["usuario"]."</td>
            <td>".$registroval["sugerencias"]."</td>
-           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button></td>
+           <td>";?>
+          
+            <a href="javascript:val_sugere('<?php echo $registroval['id'];?>','<?php echo $registroval['usuario'];?>');" class=" clik-validar glyphicon glyphicon-ok-circle btn btn-success" ></a>
+           <?php echo "</td>
            </tr>";
             }}
           else{
@@ -71,17 +79,76 @@
 </div>
 </div>
     
-    <!--MODAL ELIMINAR-->
-<div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <style type="text/css">
+        .negrita1{color:forestgreen;}
+       .negrita2{color:firebrick;}
+    </style>
+     <!--MODAL Suegrencia vali-->
+<div class="modal fade " id="mod_valisuge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
   		<div class="modal-content">
   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-            <center><h1 style="color:crimsom;">modal</h1></center>	
-  		    <div class="modal-body" style="background:#F6CECE;">
-  		        
+            <center><h1 style="color:crimsom;">VALIDAR SUGERENCIA</h1></center>	
+  		    <div class="modal-body">
+  		        <center>
+                    <form action="controlador/validarsugerencia.php">
+                        <h4>Usted está apunto de <span class="negrita1">enviar</span> la sugerencia de <h2 id="names" style="color:darkcyan"></h2> a la listra de trabajos pendientes</h4>
+                        <input type="text" id="idsu" style="display:none"><br>
+                        <input type="submit" name="vali" value="Validar" class="btn btn-primary">
+                        
+                         <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+                    </form>
+                </center>
   			</div>
   		</div>
   		
   	</div>
     </div>
 
+
+    
+      <!--MODAL Suegrencia eli-->
+<div class="modal fade " id="mod_elimisuge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+            <center><h1 style="color:crimsom;">DESCARTAR SUGERENCIA</h1></center>	
+  		    <div class="modal-body" >
+                <center>
+                    <form action="controlador/validarsugerencia.php">
+                       <h4>Usted está apunto de <span class="negrita2">descartar</span> la sugerencia de <h2 id="namer" style="color:darkcyan"></h2> </h4>
+                        <input type="text" id="idsue" style="display:none"><br>
+                        <input type="submit" name="descartar" value="Descartar" class="btn btn-warning">
+                        
+                         <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true"> 
+                    </form>
+                </center>
+  			</div>
+  		</div>
+  		
+  	</div>
+    </div>
+    <!--MODAL Suegrencia terminado-->
+<div class="modal fade " id="mod_validarsuge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+            <center><h1 style="color:crimsom;">MARCAR COMO TERMINADO</h1></center>	
+  		    <div class="modal-body" >
+  		        <center>
+                    <form action="controlador/validarsugerencia.php">
+                        <h4>Usted está apunto de marcar como <span class="negrita1">terminado</span> la sugerencia de <h2 id="de" style="color:darkcyan"></h2> </h4>
+                        <input type="text" id="idval" style="display:none"><br>
+                        <input type="submit" name="terminado" value="Validar" class="btn btn-primary">
+                        
+                         <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
+                    </form>
+                    </form>
+                </center>
+  			</div>
+  		</div>
+  		
+  	</div>
+    </div>
+    
+   
