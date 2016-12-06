@@ -2,7 +2,7 @@
 <div class="contenido">
    <h3 id="titulo">Mantenimiento Sugerencias</h3>
 <div class="body">
-       <H1>LISTA PARA VALIDAR</H1>
+       
       <!-- TABLA DE LISTA-->
       <div class=" t table-responsive" class="row"> 
       <table class="table table-striped table-bordered table-condensed">
@@ -35,7 +35,7 @@
         </table>
         </div> 
        
-       <H1>LISTA DE PENDIENTES</H1>
+       <H1>PENDIENTES</H1>
        
        <div class=" t table-responsive" class="row"> 
       <table class="table table-striped table-bordered table-condensed">
@@ -46,15 +46,15 @@
            <th>Opciones</th>
         </tr>
         <?php
-          if($validoval=="1"){
+          if($valido=="1"){
           $numero=0;
-          foreach($matrizSugerenciasval as $registroval){
+          foreach($matrizSugerencias as $registro){
               $numero=$numero+1;
 	       echo "<tr>
            <td>".$numero."</td>
-           <td>".$registroval["usuario"]."</td>
-           <td>".$registroval["sugerencias"]."</td>
-           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button></td>
+           <td>".$registro["usuario"]."</td>
+           <td>".$registro["sugerencias"]."</td>
+           <td><button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button> </td>
            </tr>";
             }}
           else{

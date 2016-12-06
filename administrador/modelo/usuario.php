@@ -122,21 +122,7 @@ class sugerencias{
         $sugerencias=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion_cliente();
-        $sql ="select * from sugerencias where estado=0";
-        $stm=$conexion->prepare($sql);
-        $stm->execute();
-        
-        while($filas=$stm->fetch(PDO::FETCH_ASSOC)){
-             $sugerencias[]=$filas;
-         }
-         return $sugerencias;
-         
-    }
-    public function get_sugerenciasvalidas(){
-        $sugerencias=null;
-        $modelo = new Conexion();
-        $conexion = $modelo->get_conexion_cliente();
-        $sql ="select * from sugerencias where estado=1";
+        $sql ="select * from sugerencias";
         $stm=$conexion->prepare($sql);
         $stm->execute();
         
