@@ -102,7 +102,9 @@
                     <h4>Usted esta a punto de <span class="negrita1">validar</span> la oferta de: </h4> <h2 class="oferta"id="rubro"></h2>
                     <h4>que fue publicada por:</h4>
                     <h2 class="name"id="nom"></h2>
-			  	     <input type="text" name="email" id="email" class="disnone"/><input type="text"  name="id" id="id" class="disnone"/><br><br>
+                    <input type="text" name="rubro" id="rub" class="disnone"/>
+			  	     <input type="text" name="email" id="email" class="disnone"/>
+			  	     <input type="text"  name="id" id="id" class="disnone"/><br><br>
 			  	    <input type="submit" value="Publicar" name="publicar" class="btn-primary btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>
@@ -133,7 +135,9 @@
 			  	<center>
 			  	<form action="controlador/validaroferta.php" method="post">
                     <h4>Usted esta a punto de marcar como <span class="negrita2">observado</span> esta oferta de: </h4> <h2 class="oferta" id="rubrobs"></h2>
-			  	     <input type="text" name="emailobs" id="emailobs" class="disnone"/><input type="text"  name="idobs" id="idobs" class="disnone"/><br><br>
+			  	     <input type="text" name="emailobs" id="emailobs" class="disnone"/>
+			  	     <input type="text" name="rubro" id="rubobs" class="disnone"/>
+			  	     <input type="text"  name="idobs" id="idobs" class="disnone"/><br><br>
 			  	    <input type="submit" value="Observar" name="observar" class="btn-primary btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>

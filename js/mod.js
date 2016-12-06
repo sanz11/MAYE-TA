@@ -52,12 +52,14 @@ function val_oferta(id,nom,rubro,email){
 	$('#id').val(id);
     $('#nom').text(nom);
     $('#rubro').text(rubro);
+    $('#rub').val(rubro);
     $('#email').val(email);
 }
 function obs_oferta(id,email,rubro){
 	$('#idobs').val(id);
     $('#emailobs').val(email);
     $('#rubrobs').text(rubro);
+    $('#rubobs').val(rubro);
     
 }
 

@@ -111,9 +111,35 @@ class usuario{
         $stm=$conexion->prepare($sql);
         $stm->bindParam(":dni",$dni);
         $stm->execute();
-        
-       
     }
+      public function msn($email){
+		 
+		 $modelo = new Conexion();
+          $mensaje=null;
+		 $conexion=$modelo->get_conexion_cliente();
+          $con=(" select * from trabajador where email=:email ");
+          $st=$conexion->prepare($con);
+         $st->bindParam(':email',$email);
+          $st->execute();
+          while($filas=$st->fetch(PDO::FETCH_ASSOC)){
+			 $mensaje[]=$filas;
+		 }
+          $num=$mensaje['cont_mensaje']+1;
+		  
+			    $consulta=(" update trabajador set cont_mensaje=:num where email=:email ");
+			  	$statement=$conexion->prepare($consulta);
+                $statement->bindParam(':email',$email);
+                $statement->bindParam(':num',$num);
+		  
+		  		if(!$statement){
+			  		return "error al actualizar";
+					
+		  		}else{
+			   		$statement->execute();
+			  		return "los datos se actualizaron <strong>correctamente.<br>Vuelva a iniciar sessión</strong> para ver los cambios";
+				}
+		  
+	 	} 
     
 }
 
