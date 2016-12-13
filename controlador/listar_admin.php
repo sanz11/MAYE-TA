@@ -1,13 +1,13 @@
-<?php
+addslashes(<?php
 require_once("modelo/Conectar.php");
 require_once("modelo/admin.php");
 
 $admin= new admin();
 $msbusqueda="";
 
-@$dato=$_POST['dato'];
-@$defecha=$_POST['defecha'];
-@$hastafecha=$_POST['hastafecha'];
+@$dato=addslashes($_POST['dato']);
+@$defecha=addslashes($_POST['defecha']);
+@$hastafecha=addslashes($_POST['hastafecha']);
 
 if(@$_POST["buscar"]){
 

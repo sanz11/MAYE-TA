@@ -6,9 +6,15 @@ $user = new usuario();
 
 if(isset($_POST['eliminar'])){
     
-$dato = $_POST['dni'];
+$dato = addslashes($_POST['dni']);
+$tipo = addslashes($_POST['tipo']);
     
     echo $hola =$user->delete_usuario($dato);
     
-    header("location:../superadmin.php?pagina=usuarios.php");
+    if($tipo==="superadmin"){
+        header("location:../superadmin.php?pagina=usuarios.php");
+    }else{
+        header("location:../admin.php?pagina=usuarios.php");
+    }
+    
 }

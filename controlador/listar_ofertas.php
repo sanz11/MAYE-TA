@@ -5,9 +5,9 @@ require_once("modelo/usuario.php");
 $oferta = new oferta();
 $msbusqueda="";
 $valido='0';
-@$rubro =$_POST['rubro'];
-@$defecha=$_POST['defecha'];
-@$hastafecha=$_POST['hastafecha'];
+@$rubro =addslashes($_POST['rubro']);
+@$defecha=addslashes($_POST['defecha']);
+@$hastafecha=addslashes($_POST['hastafecha']);
 
 if(isset($_POST['buscar'])){
     $matrizOferta = $oferta->search_oferta($rubro,$defecha,$hastafecha);

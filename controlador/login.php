@@ -10,19 +10,21 @@
 	}
 	
 	if(@$_POST["ingresar"]){
-		@$cuenta=$_POST['user'];
-	@$password=$_POST['pass'];
+		@$cuenta=addslashes($_POST['user']);
+	@$pass=addslashes($_POST['pass']);
+        $password=md5($pass);
 		if(!empty($cuenta)){
 			if(!empty($password)){
 				$consulta=$mysqli->query("select * from administrador where dni='$cuenta' and contra='$password'");
 				if(mysqli_num_rows($consulta)){
 					$arreglo=mysqli_fetch_array($consulta);
-					$_SESSION["nombre"]=$arreglo["nombre"];
-                    $_SESSION["dni"]=$arreglo["dni"];
-                    $_SESSION["telefono"]=$arreglo["telefono"];
-                    $_SESSION["apellidos"]=$arreglo["apellidos"];
-					$_SESSION["correo"]=$arreglo["correo"];
-					$_SESSION["foto"]=$arreglo["foto"];
+					$_SESSION["nombreadmin"]=$arreglo["nombre"];
+                    $_SESSION["dniadmin"]=$arreglo["dni"];
+                    $_SESSION["telefonoadmin"]=$arreglo["telefono"];
+                    $_SESSION["apellidosadmin"]=$arreglo["apellidos"];
+                    $_SESSION["tipoadmin"]=$arreglo["tipo_admin"];
+					$_SESSION["correoadmin"]=$arreglo["correo"];
+					$_SESSION["fotoadmin"]=$arreglo["foto"];
                     
                     $tipo=$arreglo["tipo_admin"];
         

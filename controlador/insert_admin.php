@@ -4,14 +4,16 @@ require_once('modelo/admin.php');
 
 if(@$_POST["registrar"]){
 $mensaje="";
-@$dni=$_POST['dni'];
-@$nombre=$_POST['nombre'];
-@$apellidos=$_POST['apellidos'];
-@$nick=$_POST['nick'];
-@$correo=$_POST['correo'];
-@$tipo=$_POST['tipo'];
-@$password=$_POST['password'];
-@$fecha=$_POST['fecha'];
+@$dni=addslashes($_POST['dni']);
+@$nombre=addslashes($_POST['nombre']);
+@$apellidos=addslashes($_POST['apellidos']);
+@$nick=addslashes($_POST['nick']);
+@$correo=addslashes($_POST['correo']);
+@$tipo=addslashes($_POST['tipo']);
+@$pass=addslashes($_POST['password']);
+@$fecha=addslashes($_POST['fecha']);
+
+    $password=md5($pass);
 
 $consulta= new admin();
     

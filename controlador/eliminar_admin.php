@@ -6,7 +6,7 @@ $user = new admin();
 
 if(isset($_POST['eliminar'])){
     
-$dato = $_POST['dni'];
+$dato = addslashes($_POST['dni']);
     
     echo $hola =$user->eliminar_admin($dato);
     

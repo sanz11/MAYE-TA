@@ -1,4 +1,4 @@
-<?php
+addslashes(<?php
 
 require_once("modelo/Conectar.php");
 require_once("modelo/usuario.php");
@@ -8,8 +8,8 @@ $msbusqueda="";
 
 if(isset($_POST['buscar'])){
     
-$dato = $_POST['dato'];
-$fecha = $_POST['fecha'];
+$dato = addslashes($_POST['dato']);
+$fecha = addslashes($_POST['fecha']);
     
     $matrizUsuario=$user->search_usuario($dato,$fecha);
     $msbusqueda="Resultados de busqueda por:". $dato . $fecha.".";

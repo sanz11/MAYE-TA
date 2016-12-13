@@ -8,10 +8,10 @@ if(@$_POST["actualizar"]){
 
 $mensaje="";
 $resultado=null;
-@$fotoac=$_POST['fotoactu'];
-@$telefono=$_POST['telefono'];
-@$correo=$_POST['email'];
-@$dni=$_POST['dniactu'];
+@$fotoac=addslashes($_POST['fotoactu']);
+@$telefono=addslashes($_POST['telefono']);
+@$correo=addslashes($_POST['email']);
+@$dni=addslashes($_POST['dniactu']);
 
 $foto=$_FILES["fotosub"]["name"];
 $ruta=$_FILES["fotosub"]["tmp_name"];

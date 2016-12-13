@@ -38,7 +38,6 @@
                    <h4 class="alert-danger"><?php echo @$error[2];?></h4>
                     <input class="btn btn-lg btn-primary btn-block" type="submit" name="ingresar" value="Ingresar">
                  
-                <a href="#" class="pull-right need-help">Olvide mi contraseña </a>
                 </form>
             </div>
             

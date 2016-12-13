@@ -11,22 +11,22 @@
        
        <!--registro-->
        <form  method="post" action="" class="row">
-         <legend style="margin-left:25px;"> Buscar por </legend>
+         <legend style="margin-left:25px;"> Buscar por: </legend>
           
           
           <div class="row clearfix col-sm-12">
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                           <label for="dni">DNI/ apellidos / tipo/</label>
-                            <input type="text" class="form-control" name="dato" placeholder="dato">
+                           <label for="dni">DNI/ Apellidos / Tipo/</label>
+                            <input type="text" class="form-control" name="dato" placeholder="Dato">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                            <label for="password">de esta Fecha:</label>
+                            <label for="password">De esta Fecha:</label>
                             <input type="date" class="form-control" name="defecha" >
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                            <label for="password">hasta esta Fecha:</label>
+                            <label for="password">Hasta esta Fecha:</label>
                             <input type="date" class="form-control" name="hastafecha">
                         </div>
                     </div>
@@ -56,7 +56,7 @@
        <tr class="info">
            <th>Nro</th>
            <th>DNI</th>
-           <th>Telefono</th>
+           <th>Teléfono</th>
            <th>Nombre y Apellidos</th>
            <th>Correo</th> 
            <th>Tipo</th>
@@ -88,7 +88,7 @@
            
             }}
           else{
-              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BÚSQUEDA</td></tr>";
           }
           //echo $msn;
           ?>
@@ -109,11 +109,11 @@
   		    <div class="modal-body" style="background:#F6CECE;">
   		        <form  method="post" action="">
                       <div class="form-group col-sm-6">
-                        <label for="dni">DNI</label>
+                        <label for="dni">DNI:</label>
                         <input type="number" class="form-control" name="dni" required>
                       </div>
                       <div class="form-group col-sm-6">
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" name="nombre" required>
                       </div>
                       <div class="form-group col-sm-6">
@@ -137,7 +137,7 @@
                       </div>
                     <div class="form-group col-sm-6">
                           <label for="password">Password:</label>
-                         <input type="password" class="form-control" name="password" required>
+                         <input type="password" class="form-control" name="password" minlength="6" required>
                     </div>
                        <div class="form-group col-sm-6">
                             <label for="password">Fecha de Ingreso:</label>
@@ -167,7 +167,7 @@
 			  	<form action="controlador/eliminar_admin.php" method="post">
                      <img id="ima" src="im/admin/avatar.png"height="200px" ><br>
                     <h4>Usted esta a punto de eliminar a: </h4> <h2 id="nom"></h2>
-                    <h4>con dni N°:</h4> 
+                    <h4>con DNI N°:</h4> 
 			  	     <input type="text" readonly name="dni" id="dni"/><br><br>
 			  	    <input type="submit" value="Eliminar" name="eliminar" class="btn-danger btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
@@ -193,7 +193,7 @@
 			  	<form action="controlador/edit_admin.php" method="post">
     
                 <h4>Actualizar a </h4> <h2 id="nombr"></h2>
-                    <h4>con dni N°:</h4> 
+                    <h4>con DNI N°:</h4> 
 			  	     <input type="text" readonly name="dniad" id="dniad"/><br><br>
 			  	    <select name="tipo" class="form-control col-sm-3">
                             <option value="admin">admin</option>

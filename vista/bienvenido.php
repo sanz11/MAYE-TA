@@ -1,5 +1,5 @@
 <div class="contenido">
    <h1 class="bien">
-       Bienvenido <?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?>, Buen Dia
+       <?php echo $_SESSION['nombreadmin'].", "; ?>Bienvenido(a) a Mayeoficios  
    </h1>
 </div>

@@ -7,7 +7,7 @@
        
        <!--registro-->
        <form  method="post" action="" class="row">
-         <legend style="margin-left:25px;"> Buscar por </legend>
+         <legend style="margin-left:25px;"> Buscar por: </legend>
           <div class="row clearfix col-sm-12">
                <div class="col-sm-2"></div>
                 <div class="col-sm-4">
@@ -21,7 +21,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                            <label for="password">Fecha N:</label>
+                            <label for="password">Fec Nac:</label>
                             <input type="date" class="form-control" name="fecha" >
                         </div>
                     </div>
@@ -72,7 +72,7 @@
             }
           }
           else{
-              echo "<tr><td colspan='8'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+              echo "<tr><td colspan='8'>NO SE ENCONTRARON DATOS PARA LA BÚSQUEDA</td></tr>";
           }
           //echo $msn;
           ?>
@@ -84,6 +84,10 @@
        
 </div>
 </div>
+    <style type="text/css">
+       .disnone {display: none;}
+       
+   </style>
     
     <!--MODAL ELIMINAR-->
 <div class="modal fade " id="mod_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -98,7 +102,7 @@
 			  	<form action="controlador/eliminar_usuario.php" method="post">
                      <img id="ima" src="im/admin/avatar.png"height="200px" ><br>
                     <h4>Usted esta a punto de eliminar a: </h4> <h2 id="nom"></h2>
-                    <h4>con dni N°:</h4> 
+                    <h4>con DNI N°:</h4> <input type="text"  name="tipo" value="<?php echo $_SESSION['tipoadmin']?>" class="disnone"/>
 			  	     <input type="text" readonly name="dni" id="dni"/><br><br>
 			  	    <input type="submit" value="Eliminar" name="eliminar" class="btn-danger btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">

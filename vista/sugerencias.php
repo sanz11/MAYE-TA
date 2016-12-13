@@ -9,7 +9,7 @@
        <tr class="info">
            <th>Nro</th>
            <th>Usuario</th>
-           <th>Quéjas oSugerencias</th>
+           <th>Quéjas o Sugerencias</th>
            <th>Opciones</th>
         </tr>
         <?php
@@ -30,7 +30,7 @@
            </tr>";
             }}
           else{
-              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BÚSQUEDA</td></tr>";
           }
           //echo $msn;
           ?>
@@ -47,7 +47,7 @@
        <tr class="info">
            <th>Nro</th>
            <th>Usuario</th>
-           <th>Quéjas oSugerencias</th>
+           <th>Quéjas o Sugerencias</th>
            <th>Opciones</th>
         </tr>
         <?php
@@ -66,7 +66,7 @@
            </tr>";
             }}
           else{
-              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BÚSQUEDA</td></tr>";
           }
           //echo $msn;
           ?>
@@ -94,7 +94,7 @@
                     <form action="controlador/validarsugerencia.php" method="post">
                         <h4>Usted está apunto de <span class="negrita1">enviar</span> la sugerencia de <h2 id="names" style="color:darkcyan"></h2> a la listra de trabajos pendientes</h4>
                         <input type="text" id="idsu" name="idsu" style="display:none"><br>
-                        <input type="submit" name="vali" value="Validar" class="btn btn-primary">
+                        <input type="submit" name="vali" value="Validar" class="btn btn-primary"><input type="text"  name="tipo" value="<?php echo $_SESSION['tipo']?>" class="disnone"/>
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
                     </form>
@@ -118,7 +118,7 @@
                     <form action="controlador/validarsugerencia.php" method="post">
                        <h4>Usted está apunto de <span class="negrita2">descartar</span> la sugerencia de <h2 id="namer" style="color:darkcyan"></h2> </h4>
                         <input type="text" id="idsue" name="idsue" style="display:none"><br>
-                        <input type="submit" name="descartar" value="Descartar" class="btn btn-warning">
+                        <input type="submit" name="descartar" value="Descartar" class="btn btn-warning"><input type="text"  name="tipo" value="<?php echo $_SESSION['tipoadmin']?>" class="disnone"/>
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true"> 
                     </form>
@@ -126,7 +126,10 @@
   			</div>
   		</div>
   		
-  	</div>
+  	</div> <style type="text/css">
+       .disnone {display: none;}
+       
+   </style>
     </div>
     <!--MODAL Suegrencia terminado-->
 <div class="modal fade " id="mod_validarsuge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -139,7 +142,7 @@
                     <form action="controlador/validarsugerencia.php" method="post">
                         <h4>Usted está apunto de marcar como <span class="negrita1">terminado</span> la sugerencia de <h2 id="de" style="color:darkcyan"></h2> </h4>
                         <input type="text" id="idval" name="idval" style="display:none"><br>
-                        <input type="submit" name="terminado" value="Validar" class="btn btn-primary">
+                        <input type="submit" name="terminado" value="Validar" class="btn btn-primary"><input type="text"  name="tipo" value="<?php echo $_SESSION['tipoadmin']?>" class="disnone"/>
                         
                          <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
                     </form>

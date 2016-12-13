@@ -4,7 +4,7 @@
 <div class="body">
     
        <form  method="post" action="" class="row">
-         <legend style="margin-left:25px;"> Buscar por </legend>
+         <legend style="margin-left:25px;"> Buscar por:</legend>
           <div class="row clearfix col-sm-12">
                 <div class="col-sm-4">
                     <div class="form-group">
@@ -17,7 +17,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                            <label for="password">de esta Fecha:</label>
+                            <label for="password">De esta Fecha:</label>
                             <input type="date" class="form-control" name="defecha" >
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <div class="form-line">
-                            <label for="password">hasta esta Fecha:</label>
+                            <label for="password">Hasta esta Fecha:</label>
                             <input type="date" class="form-control" name="hastafecha">
                         </div>
                     </div>
@@ -73,7 +73,7 @@
            </tr>";
             }}
           else{
-              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BUSQUEDA</td></tr>";
+              echo "<tr><td colspan='9'>NO SE ENCONTRARON DATOS PARA LA BÚSQUEDA</td></tr>";
           }
           //echo $msn;
           ?>
@@ -104,7 +104,7 @@
                     <h2 class="name"id="nom"></h2>
                     <input type="text" name="rubro" id="rub" class="disnone"/>
 			  	     <input type="text" name="email" id="email" class="disnone"/>
-			  	     <input type="text"  name="id" id="id" class="disnone"/><br><br>
+			  	     <input type="text"  name="id" id="id" class="disnone"/><br><br><input type="text"  name="tipo" value="<?php echo $_SESSION['tipoadmin']?>" class="disnone"/>
 			  	    <input type="submit" value="Publicar" name="publicar" class="btn-primary btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>
@@ -137,7 +137,7 @@
                     <h4>Usted esta a punto de marcar como <span class="negrita2">observado</span> esta oferta de: </h4> <h2 class="oferta" id="rubrobs"></h2>
 			  	     <input type="text" name="emailobs" id="emailobs" class="disnone"/>
 			  	     <input type="text" name="rubro" id="rubobs" class="disnone"/>
-			  	     <input type="text"  name="idobs" id="idobs" class="disnone"/><br><br>
+			  	     <input type="text"  name="idobs" id="idobs" class="disnone"/><br><input type="text"  name="tipo" value="<?php echo $_SESSION['tipoadmin']?>" class="disnone"/><br>
 			  	    <input type="submit" value="Observar" name="observar" class="btn-primary btn">
 			  	     <input type="button" value="Cancelar" class="btn-success btn" class="close" data-dismiss="modal" aria-hidden="true">
 			  	</form>

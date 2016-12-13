@@ -4,12 +4,13 @@ require_once('../modelo/usuario.php');
 
 @$oferta = new oferta();
 @$usuario = new usuario();
-@$email = $_POST['email'];
-@$id = $_POST['id'];
-@$rubobs = $_POST['rubobs'];
-@$rub = $_POST['rub'];
-@$emailobs = $_POST['emailobs'];
-@$idobs = $_POST['idobs'];
+@$email = addslashes($_POST['email']);
+@$tipo = addslashes($_POST['tipo']);
+@$id = addslashes($_POST['id']);
+@$rubobs = addslashes($_POST['rubobs']);
+@$rub = addslashes($_POST['rub']);
+@$emailobs = addslashes($_POST['emailobs']);
+@$idobs = addslashes($_POST['idobs']);
 $asunto="SU OFERTA FUE ENVIADO EXITOSAMENTE";
 $asunto2="SU OFERTA FUE OBSERVADA";
 $cabeceras = 'From: postulacion@MayeOficios.com' . "\r\n" .
@@ -41,6 +42,9 @@ if(isset($_POST['observar'])){
     $enviomsn="<script> alert('Lo sentimos, usted no a podido postular.');</script>";
 }
 }
-
- header("location:../superadmin.php?pagina=ofertas.php");
+if($tipo==="superadmin"){
+       header("location:../superadmin.php?pagina=ofertas.php");
+    }else{
+       header("location:../admin.php?pagina=ofertas.php");
+    }
 ?>

@@ -6,8 +6,8 @@ $user = new admin();
 
 if(isset($_POST['actualizar'])){
     
-$dato = $_POST['dniad'];
-$tipo = $_POST['tipo'];
+$dato = addslashes($_POST['dniad']);
+$tipo = addslashes($_POST['tipo']);
     
 $user->Update_adminadmi($dato,$tipo);
     
