@@ -5,11 +5,12 @@
 <meta charset="UTF-8">
 <title>Mayeoficios Admin</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" href="css/style.min.css">
 <link rel="stylesheet" href="css/grafico.css">
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/perfil-admin.css">
 <link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/style.min.css">
 
 <!--fonts-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
