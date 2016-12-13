@@ -90,7 +90,7 @@
   </div>
   <div class="form-group">
     <label for="ejemplo_archivo_1">Editar foto de perfil</label>
-    <input type="file" name="fotosub">
+    <input type="file" name="fotosub" accept="image/*">
     <p class="help-block">28MG</p>
   </div>
   <input style="display:none;"type="text" value="<?php echo $_SESSION['dniadmin'];?>" name="dniactu">
